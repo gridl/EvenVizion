@@ -10,13 +10,13 @@ All the necessary libraries and versions you can find in requirements.txt
 
 ## Running the code
 
-###Get jsons with homography matrix
+### Get jsons with homography matrix
 
 $python3 evenvizion_component.py --path_to_video="test_video/test_video.mp4" --experiment_folder="experiment"  --experiment_name="test_video_processing" --path_to_original_coordinate="test_video/original_coordinates.json" 
 
 All the parameters could be changed
 
-####About the parameters:
+#### About the parameters:
 
 - path_to_video - path to analyze video
 - experiment_folder - folder to save all script working results
@@ -32,7 +32,7 @@ All the parameters could be changed
 - number_of_horizontal_lines - the number of horizontal lines in heatmap visualization
 
 
-####About the constants:
+#### About the constants:
 
 - INFINITY_COORDINATE_FLAG - if x or y coordinate is more than this threshold, the value of the coordinates is considered undefined
 - LOWES_RATIO - the ratio for Lowe's test 
@@ -46,11 +46,11 @@ As a result, you get json with a Homography matrix between two frames (not super
 - path to fixed_coordinate_system_visualization: experiment_folder + experiment_name + fixed_coordinate_system_visualization
 - path to: experiment_folder + experiment_name + heatmap_visualization
 
-###Visualize EvenVizion
+### Visualize EvenVizion
 
 $python3 evenvizion_visualization.py --path_to_homography_dict="experiment/test_video_processing/dict_with_homography_matrix.json" --path_to_original_video="test_video/test_video.mp4" --experiment_name="visualize_camera_stabilization" --experiment_folder="experiment/test_video_processing"
 
-####About the parameters:
+#### About the parameters:
 
 - path_to_homography_dict - path to JSON with the homography dict
 
@@ -66,18 +66,18 @@ As a result, you get visualize_camera_stabilization_stabilization
 In this visualization, such changes as scaling and rotation are ignored. We took into consideration only the camera transition. But using the homography matrix from the previous step we can recalculate the coordinates considering all camera movements (Transition, scale, and rotation). You can see it heatmap_visualization
 
 
-###Compare EvenVizion with original video
+### Compare EvenVizion with original video
 
 $python3 compare_evenvizion_with_original_video.py --path_to_original_video="test_video/test_video.mp4" --path_to_EvenVizion_result_frames="experiment/test_video_processing/visualize camera stabilization" --experiment_folder="experiment/test_video_processing" --experiment_name="original_video_with_EvenVizion"
 
-####About the parameters:
+#### About the parameters:
 
 - path_to_evenvizion_result_frames - path to EvenVizion visualization output frames
 
 As a result you get original_video_with_EvenVizion visualization
 - path to the result: experiment_folder + experiment_name
 
-##KNOWN ISSUES
+## KNOWN ISSUES
 
 - N/A coordinates
 The coordinates can’t be defined when the matching points are clinging to moving objects. This means that the filtration isn’t working well enough. The coordinates can’t be defined also when camera rotation angle is more than 90°. As a solution to the first problem we now consider applying video motion segmentation to distinguish static points from motion points (taking into consideration the nature of movement). As a solution to the second problem we see the transfer to the cylindrical coordinate system. 
