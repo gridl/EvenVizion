@@ -72,7 +72,7 @@ As a result, you get JSON with the matrix of a homography between two frames (no
 As a result, you get visualize_camera_stabilization_stabilization 
 - path to  the result: experiment_folder + experiment_name
 
-In this visualization, such changes as scaling and rotation are ignored. We took into consideration only the camera transition. But using the homography matrix from the previous step we can recalculate the coordinates considering all camera movements (Transition, scale, and rotation). You can see it  heatmap_visualization.
+In this visualization, such changes as scaling and rotation are ignored. We took into consideration only the camera transition. But using the homography matrix from the previous step we can recalculate the coordinates considering all camera movements (Transition, scale, and rotation). You can see it in  heatmap_visualization.
 
 
 ### Compare EvenVizion with original video
