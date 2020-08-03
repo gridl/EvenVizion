@@ -1,7 +1,10 @@
 ## About the project
 
-This project was created for getting EvenVizion component.
-As a result you get json with the homography matrices for each frame.
+EvenVizion - is a video-based camera localization component.
+It allows evaluating the relative positions of objects and translating the coordinates of the object relative to the frame into a fixed coordinate system. To determine the position of the object, the main task was set – the creation of a fixed coordinate system. To solve this, we createdthe EvenVizion component. We show that the task can be solved even in bad filming conditions (sharp camera movement,bad weather conditions, filming in the dark and so on).
+
+As a result you get JSON with the homography matrices for each frame.
+
 More about the project structure, mathematical tools used and the explanation of visualization you can find in <a href="EvenVizion - video based camera localization componen.pdf">EvenVizion - video based camera localization component.pdf</a>
 
 <img src='./experiment/test_video_processing/original_video_with_EvenVizion/original_video_with_EvenVizion.gif'>
@@ -16,7 +19,7 @@ All the necessary libraries and versions you can find in requirements.txt
 
 ` $python3 evenvizion_component.py --path_to_video="test_video/test_video.mp4" --experiment_folder="experiment"  --experiment_name="test_video_processing" --path_to_original_coordinate="test_video/original_coordinates.json" `
 
-All the parameters could be changed
+All the parameters can be changed
 
 #### About the parameters:
 
