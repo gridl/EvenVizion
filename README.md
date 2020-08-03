@@ -2,7 +2,7 @@
 
 This project was created for getting EvenVizion component.
 As a result you get json with the homography matrices for each frame.
-More about the project structure, mathematical tools used and the explanation of visualization you can find in"EvenVizion - video based camera localization component.pdf"
+More about the project structure, mathematical tools used and the explanation of visualization you can find in <a href="EvenVizion - video based camera localization componen.pdf">EvenVizion - video based camera localization component.pdf</a>
 
 <img src='./experiment/test_video_processing/original_video_with_EvenVizion/original_video_with_EvenVizion.gif'>
 
@@ -14,7 +14,7 @@ All the necessary libraries and versions you can find in requirements.txt
 
 ### Get jsons with homography matrix
 
-$python3 evenvizion_component.py --path_to_video="test_video/test_video.mp4" --experiment_folder="experiment"  --experiment_name="test_video_processing" --path_to_original_coordinate="test_video/original_coordinates.json" 
+` $python3 evenvizion_component.py --path_to_video="test_video/test_video.mp4" --experiment_folder="experiment"  --experiment_name="test_video_processing" --path_to_original_coordinate="test_video/original_coordinates.json" `
 
 All the parameters could be changed
 
@@ -53,7 +53,7 @@ As a result, you get json with a Homography matrix between two frames (not super
 
 ### Visualize EvenVizion
 
-$python3 evenvizion_visualization.py --path_to_homography_dict="experiment/test_video_processing/dict_with_homography_matrix.json" --path_to_original_video="test_video/test_video.mp4" --experiment_name="visualize_camera_stabilization" --experiment_folder="experiment/test_video_processing"
+`$python3 evenvizion_visualization.py --path_to_homography_dict="experiment/test_video_processing/dict_with_homography_matrix.json" --path_to_original_video="test_video/test_video.mp4" --experiment_name="visualize_camera_stabilization" --experiment_folder="experiment/test_video_processing"`
 
 #### About the parameters:
 
@@ -73,7 +73,7 @@ In this visualization, such changes as scaling and rotation are ignored. We took
 
 ### Compare EvenVizion with original video
 
-$python3 compare_evenvizion_with_original_video.py --path_to_original_video="test_video/test_video.mp4" --path_to_EvenVizion_result_frames="experiment/test_video_processing/visualize camera stabilization" --experiment_folder="experiment/test_video_processing" --experiment_name="original_video_with_EvenVizion"
+`$python3 compare_evenvizion_with_original_video.py --path_to_original_video="test_video/test_video.mp4" --path_to_EvenVizion_result_frames="experiment/test_video_processing/visualize camera stabilization" --experiment_folder="experiment/test_video_processing" --experiment_name="original_video_with_EvenVizion"`
 
 #### About the parameters:
 
