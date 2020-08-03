@@ -47,7 +47,7 @@ As a result, you get json with a Homography matrix between two frames (not super
 - path to result jsons: experiment_folder + experiment_name
 - path to fixed_coordinate_system_visualization: experiment_folder + experiment_name + fixed_coordinate_system_visualization
 
-<img src='./experiment/test_video_processing/original_video_with_EvenVizion/fixed_coordinate_system_visualization.gif'>
+<img src='./experiment/test_video_processing/fixed_coordinate_system_visualization/fixed_coordinate_system_visualization.gif'>
 
 - path to: experiment_folder + experiment_name + heatmap_visualization
 
