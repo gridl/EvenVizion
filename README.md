@@ -52,7 +52,7 @@ As a result, you get json with a Homography matrix between two frames (not super
 
 <img src='./experiment/test_video_processing/fixed_coordinate_system_visualization/fixed_coordinate_system_visualization.gif'>
 
-- path to: experiment_folder + experiment_name + heatmap_visualization
+- path to heatmap_visualization: experiment_folder + experiment_name + heatmap_visualization
 
 ### Visualize EvenVizion
 
@@ -71,7 +71,7 @@ As a result, you get json with a Homography matrix between two frames (not super
 As a result, you get visualize_camera_stabilization_stabilization 
 - path to  the result: experiment_folder + experiment_name
 
-In this visualization, such changes as scaling and rotation are ignored. We took into consideration only the camera transition. But using the homography matrix from the previous step we can recalculate the coordinates considering all camera movements (Transition, scale, and rotation). You can see it heatmap_visualization
+In this visualization, such changes as scaling and rotation are ignored. We took into consideration only the camera transition. But using the homography matrix from the previous step we can recalculate the coordinates considering all camera movements (Transition, scale, and rotation). You can see it  heatmap_visualization.
 
 
 ### Compare EvenVizion with original video
@@ -94,5 +94,5 @@ To find the homography you need at least 4 matching points. But in some cases th
 - Error
 There’s an inaccuracy in the coordinates. Poorly obtained homography matrix distorts the results of coordinate recalculation. The reasons for that are:
 Poor filtration. If the points catch on a motion object, then the homography matrix will describe not only the camera movement, but also the independent movement of objects (for example, a person's walking).
-Using the built-in findHomography () function of the OpenCV module. This function already assumes there is an error in the calculation of the homography matrix.
+Using the built-in findHomography() function of the OpenCV module. This function already assumes there is an error in the calculation of the homography matrix.
 
