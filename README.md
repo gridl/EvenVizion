@@ -1,7 +1,7 @@
 ## About the project
 
 EvenVizion - is a video-based camera localization component.
-It allows evaluating the relative positions of objects and translating the coordinates of the object (relative to the frame) into a fixed coordinate system. To determine the position of the object, the main task was set – the creation of a fixed coordinate system. To solve this, we createdthe EvenVizion component. We show that the task can be solved even in bad filming conditions (sharp camera movement,bad weather conditions, filming in the dark and so on).
+It allows evaluating the relative positions of objects and translating the coordinates of the object (relative to the frame) into a fixed coordinate system. To determine the position of the object, the main task was set – the creation of a fixed coordinate system. To solve this, we created the EvenVizion component. We show that the task can be solved even in bad filming conditions (sharp camera movement,bad weather conditions, filming in the dark and so on).
 
 As a result you get JSON with the homography matrices for each frame.
 
