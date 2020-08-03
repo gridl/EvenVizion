@@ -4,6 +4,8 @@ This project was created for getting EvenVizion component.
 As a result you get json with the homography matrices for each frame.
 More about the project structure, mathematical tools used and the explanation of visualization you can find in"EvenVizion - video based camera localization component.pdf"
 
+<img src='./experiment/test_video_processing/original_video_with_EvenVizion/original_video_with_EvenVizion.gif'>
+
 ## Installation
 
 All the necessary libraries and versions you can find in requirements.txt
@@ -44,6 +46,9 @@ All the parameters could be changed
 As a result, you get json with a Homography matrix between two frames (not superposition), json with fixed coordinates and comparison between fixed and original coordinates.
 - path to result jsons: experiment_folder + experiment_name
 - path to fixed_coordinate_system_visualization: experiment_folder + experiment_name + fixed_coordinate_system_visualization
+
+<img src='./experiment/test_video_processing/original_video_with_EvenVizion/fixed_coordinate_system_visualization.gif'>
+
 - path to: experiment_folder + experiment_name + heatmap_visualization
 
 ### Visualize EvenVizion
