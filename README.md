@@ -6,7 +6,7 @@ It allows evaluating the relative positions of objects and translating the coord
 
 As a result you get JSON with the homography matrices for each frame.
 
-More about the project structure, mathematical tools used and the explanation of visualization you can find in <a href="EvenVizion - video based camera localization componen.pdf">EvenVizion - video based camera localization component.pdf</a>.
+More about the project structure, mathematical tools used and the explanation of visualization you can find in <a href="EvenVizion - video based camera localization component.pdf">EvenVizion - video based camera localization component.pdf</a>.
 
 <img src='./experiment/test_video_processing/original_video_with_EvenVizion/original_video_with_EvenVizion.gif'>
 
