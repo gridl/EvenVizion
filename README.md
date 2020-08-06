@@ -94,11 +94,17 @@ The coordinates can’t be defined when the matching points are clinging to movi
 
 - H=None
 
-To find the homography you need at least 4 matching points. But in some cases the 4 points can’t be found, and the homography matrices are *Н=None*. In a current algorithm version we process such cases this way: if the argument *none_H_processing* is set for *True* we consider the matrix of the previous frame matches the matrix for the current frame ($H_k$=$H_k-1$). If set for *False*, then H=$E_3$, meaning that there were no movement in the frame. It is necessary to think over better handling of such situations.
+To find the homography you need at least 4 matching points. But in some cases the 4 points can’t be found, and the homography matrices are *Н=None*. In a current algorithm version we process such cases this way: if the argument *none_H_processing* is set for *True* we consider the matrix of the previous frame matches the matrix for the current frame ($$H_k$$=$$H_{k-1}$$). If set for *False*, then H=$$E_3$$, meaning that there were no movement in the frame. It is necessary to think over better handling of such situations.
 
 - Error
 
 There’s an inaccuracy in the coordinates. Poorly obtained homography matrix distorts the results of coordinate recalculation. The reasons for that are:
-- Poor filtration. If the points catch on a motion object, then the homography matrix will describe not only the camera movement, but also the independent movement of objects (for example, a person's walking).
-- Using the built-in *findHomography()* function of the OpenCV module. This function already assumes there is an error in the calculation of the homography matrix.
+1. Poor filtration. If the points catch on a motion object, then the homography matrix will describe not only the camera movement, but also the independent movement of objects (for example, a person's walking).
+2. Using the built-in *findHomography()* function of the OpenCV module. This function already assumes there is an error in the calculation of the homography matrix.
 
+## Send us your failure cases and feedback!
+
+Our project is open source and we will really appreciate getting your feedback!
+We encourage the collaboration of any kind unless it violates our CODE_OF_CONDUCT and GitHub guidelines. 
+If you find or resolve an issue, feel free to comment on GitHub or make a pull request and we will answer as soon as possible!
+If you choose to use EvenVizion for your project, please do let us know by simply commenting here or emailing to rd@oxagile.com. 
