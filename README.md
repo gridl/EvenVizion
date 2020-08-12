@@ -94,7 +94,7 @@ The coordinates can’t be defined when the matching points are clinging to movi
 
 - H=None
 
-To find the homography you need at least 4 matching points. But in some cases the 4 points can’t be found, and the homography matrices are *Н=None*. In a current algorithm version we process such cases this way: if the argument *none_H_processing* is set for *True* we consider the matrix of the previous frame matches the matrix for the current frame ($$H_k$$=$$H_{k-1}$$). If set for *False*, then H=$$E_3$$, meaning that there were no movement in the frame. It is necessary to think over better handling of such situations.
+To find the homography you need at least 4 matching points. But in some cases the 4 points can’t be found, and the homography matrices are *Н=None*. In a current algorithm version we process such cases this way: if the argument *none_H_processing* is set for *True* we consider the matrix of the previous frame matches the matrix for the current frame. If set for *False*, then the matrix H is an identity matrix, meaning that there were no movement in the frame. It is necessary to think over a better handling of such situations.
 
 - Error
 
@@ -105,6 +105,9 @@ There’s an inaccuracy in the coordinates. Poorly obtained homography matrix di
 ## Send us your failure cases and feedback!
 
 Our project is open source and we will really appreciate getting your feedback!
+
 We encourage the collaboration of any kind unless it violates our CODE_OF_CONDUCT and GitHub guidelines. 
+
 If you find or resolve an issue, feel free to comment on GitHub or make a pull request and we will answer as soon as possible!
+
 If you choose to use EvenVizion for your project, please do let us know by simply commenting here or emailing to rd@oxagile.com. 
