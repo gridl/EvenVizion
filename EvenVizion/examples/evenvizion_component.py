@@ -77,5 +77,5 @@ if __name__ == '__main__':
                                                                              [resize_info["h"], resize_info["w"]])
     cap = cv2.VideoCapture(args.path_to_video)
     comparison_save_folder = "{}/fixed_coordinate_system_visualization".format(args.save_folder)
-    comparison_original_with_fixed_coordinate_video_processing(cap, original_coordinates,
-                                                               recalculated_coordinates, comparison_save_folder, resize_info)
+    compare_original_fixed_coordinate(cap, original_coordinates,
+                                      recalculated_coordinates, comparison_save_folder, resize_info)

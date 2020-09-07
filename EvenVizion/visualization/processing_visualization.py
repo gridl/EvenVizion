@@ -42,7 +42,7 @@ def find_line_position(i, j, number_of_horizontal_lines, number_of_vertical_line
     return center_r_1, center_r_2
 
 
-def boxes_drawing(image, number_of_horizontal_lines, number_of_vertical_lines, shape_info, i, j, new_coordinates):
+def draw_one_box(image, number_of_horizontal_lines, number_of_vertical_lines, shape_info, i, j, new_coordinates):
     height, width = shape_info
     cv2.rectangle(image,
                   (int(j * width / number_of_vertical_lines), int(i * height / number_of_horizontal_lines)),
@@ -92,15 +92,15 @@ def text_coordinates_on_frame(image, coordinates_value, i, j, shape_info, lines)
     return image
 
 
-def part_line(new_coordinates, image, number_of_horizontal_lines=4, number_of_vertical_lines=5):
+def draw_markup(new_coordinates, image, number_of_horizontal_lines=4, number_of_vertical_lines=5):
     """
     Function for drawing of boxes with centers coordinates on frame
     """
     lines = {"horizontal": number_of_horizontal_lines, "vertical": number_of_vertical_lines, }
     for i in range(0, number_of_horizontal_lines):
         for j in range(0, number_of_vertical_lines):
-            boxes_drawing(image, number_of_horizontal_lines, number_of_vertical_lines, image.shape[:-1], i, j,
-                          new_coordinates)
+            draw_one_box(image, number_of_horizontal_lines, number_of_vertical_lines, image.shape[:-1], i, j,
+                         new_coordinates)
             coordinates_value = define_center_coordinate(new_coordinates, i, j, image.shape[:-1], lines)
             image = text_coordinates_on_frame(image, coordinates_value, i, j, image.shape[:-1], lines)
     return image
@@ -118,7 +118,7 @@ def heatmap_frame_processing(new_coordinates, original_image, path_to_save, resi
     heatmap = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)
     hif = .8
     superimposed_img = heatmap * hif + image
-    part_line(new_coordinates, superimposed_img)
+    draw_markup(new_coordinates, superimposed_img)
     cv2.imwrite(path_to_save, superimposed_img)
 
 
@@ -158,8 +158,8 @@ def heatmap_video_processing(
     return np.max(max_r)
 
 
-def comparison_original_with_fixed_coordinate_on_frame(image, rect_original,
-                                                       rect_fixed, h_resize_coefficient, w_resize_coefficient):
+def draw_point_coords(image, rect_original,
+                      rect_fixed, h_resize_coefficient, w_resize_coefficient):
     cv2.circle(image, (int(rect_original["x1"]), int(rect_original["y1"])),
                2, color=(255, 255, 255), thickness=5, lineType=8)
     cv2.putText(image,
@@ -176,8 +176,8 @@ def comparison_original_with_fixed_coordinate_on_frame(image, rect_original,
                 fontScale=1, thickness=1)
     return image
 
-def comparison_original_with_fixed_coordinate_video_processing(capture, original_coordinates,
-                                                               recalculated_coordinates, path_to_save, resize_info):
+def compare_original_fixed_coordinate(capture, original_coordinates,
+                                      recalculated_coordinates, path_to_save, resize_info):
     """
     Visualize two coordinate system on one frame
     """
@@ -194,9 +194,9 @@ def comparison_original_with_fixed_coordinate_video_processing(capture, original
             continue
         for (rect_original, rect_fixed) in \
                 zip(original_coordinates[frame_no], recalculated_coordinates[frame_no]):
-            image = comparison_original_with_fixed_coordinate_on_frame(image, rect_original,
-                                                                       rect_fixed, h_resize_coefficient,
-                                                                       w_resize_coefficient)
+            image = draw_point_coords(image, rect_original,
+                                      rect_fixed, h_resize_coefficient,
+                                      w_resize_coefficient)
 
         path_to_save_frame = "{}/img{}.png".format(path_to_save, "%06d" % frame_no)
         cv2.imwrite(path_to_save_frame, image)
