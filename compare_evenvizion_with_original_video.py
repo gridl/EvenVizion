@@ -4,7 +4,6 @@ stitch two visualization (compare real video and EvenVizion)
 import argparse
 import logging
 import os
-
 import cv2
 import imutils
 import numpy as np

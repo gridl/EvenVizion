@@ -5,7 +5,6 @@ import argparse
 import json
 import os
 from copy import deepcopy
-
 import cv2
 import imutils
 import numpy as np
