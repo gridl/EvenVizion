@@ -6,7 +6,6 @@ import json
 import logging
 import os
 from copy import deepcopy
-
 import cv2
 import imutils
 import numpy as np
