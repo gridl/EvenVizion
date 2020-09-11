@@ -63,11 +63,11 @@ class Stitcher:
         matching_keypoints_result = self.match_keypoints(kps_a, kps_b, features_a, features_b)
         if matching_keypoints_result is None:
             logging.info("Problem with points matching")
-            return None, None, None, None, None
+            return None, None, None, None
         _, matrix_H, _, pts_a, pts_b = matching_keypoints_result
         if matrix_H is None:
             logging.info("len(matches)G<4, can't find Homography")
-            return None, None, None, None, None
+            return None, None, None, None
         new_pts_a, new_pts_b = find_static_part(matrix_H, pts_a, pts_b)
         return new_pts_a, new_pts_b, pts_a, pts_b
 
@@ -145,6 +145,7 @@ class Stitcher:
         """
         Find singular point and their descriptions
         """
+
         if features_name == "ORB":
             orb = cv2.ORB_create()
             (kps, features) = orb.detectAndCompute(image, None)
@@ -598,7 +599,11 @@ if __name__ == '__main__':
                         default=4)
 
     args = parser.parse_args()
+
     args.save_folder = args.experiment_folder + '/{}'.format(args.experiment_name)
+    if not os.path.exists(args.save_folder):
+        os.makedirs(args.save_folder)
+    args.save_folder = args.save_folder + '/{}'.format(os.path.split(args.path_to_video)[-1])
     if not os.path.exists(args.save_folder):
         os.makedirs(args.save_folder)
 
@@ -620,5 +625,6 @@ if __name__ == '__main__':
                 txt_.write("There are some frames with undefined coordinates")
     ###
     # json with fixed coordinate system
-    fixed_coordinate_system(path_to_characteristic_dict)
+    if args.path_to_original_coordinate:
+        fixed_coordinate_system(path_to_characteristic_dict)
     ###
