@@ -29,7 +29,7 @@ All the necessary libraries and versions you can find in requirements.txt.
 
 ## Basic use
 
-[Here](https://git.oxagile.com/rnd/computer-vision/research/computer-vision-components/camera-motion-detection/-/tree/dev_pypi_package/EvenVizion/examples)  you can find examples of package using.
+[Here](https://github.com/AIHunters/EvenVizion/tree/master/EvenVizion/examples)  you can find examples of package usage.
 
 ### evenvizion_component.py
 ` $python3 evenvizion_component.py --path_to_video="test_video/test_video.mp4" --experiment_folder="experiment"  --experiment_name="test_video_processing" --path_to_original_coordinate="test_video/original_coordinates.json" `
