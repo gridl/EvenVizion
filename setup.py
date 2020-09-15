@@ -5,7 +5,7 @@ with open("README.rst", "r") as fh:
 
 setuptools.setup(
     name="evenvizion",
-    version="0.9.4",
+    version="0.9.5",
     author="AIHunters",
     author_email="oss@aihunters.com",
     description="EvenVizion - is a video-based camera localization component",
@@ -21,7 +21,6 @@ setuptools.setup(
     install_requires=[
 	'imutils>=0.5.3',
 	'numpy>=1.19.2',
-	'opencv-python==3.4.2.17',
 'opencv-contrib-python==3.4.2.17'],
     python_requires='>=3.6',
 )
