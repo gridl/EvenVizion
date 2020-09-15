@@ -19,10 +19,10 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-	'imutils==0.5.3',
-	'numpy==1.19.2',
-	'opencv-contrib-python==3.4.2.17',
-	'opencv-python==3.4.2.17'],
+	'imutils>=0.5.3',
+	'numpy>=1.19.2',
+	'opencv-python==3.4.2.17',
+'opencv-contrib-python==3.4.2.17'],
     python_requires='>=3.6',
 )
 
