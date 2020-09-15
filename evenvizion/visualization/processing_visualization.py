@@ -3,8 +3,7 @@ EvenVizion library.
 https://github.com/AIHunters/EvenVizion
 
 Supporting paper at:
-https://github.com/AIHunters/EvenVizion/blob/master/EvenVizion%20-%20video%20based%20camera%20localization%20component.pdf
-
+https://github.com/AIHunters/EvenVizion/blob/master/EvenVizion-video_based_camera_localization_component.pdf
 This is licensed under an MIT license. See the LICENSE.md file
 for more information.
 
@@ -16,8 +15,8 @@ import cv2
 import imutils
 import numpy as np
 
-from EvenVizion.processing.constants import HEATMAP_CONSTANT
-from EvenVizion.processing.utils import are_infinity_coordinates, homography_transformation
+from evenvizion.processing.constants import HEATMAP_CONSTANT
+from evenvizion.processing.utils import are_infinity_coordinates, homography_transformation
 
 
 def draw_matches(image_a, image_b, pts_a, pts_b):

@@ -3,8 +3,7 @@ EvenVizion library.
 https://github.com/AIHunters/EvenVizion
 
 Supporting paper at:
-https://github.com/AIHunters/EvenVizion/blob/master/EvenVizion%20-%20video%20based%20camera%20localization%20component.pdf
-
+https://github.com/AIHunters/EvenVizion/blob/master/EvenVizion-video_based_camera_localization_component.pdf
 This is licensed under an MIT license. See the LICENSE.md file
 for more information.
 
@@ -17,7 +16,7 @@ import cv2
 import numpy as np
 import numpy.linalg as linalg
 
-from EvenVizion.processing.constants import INFINITY_COORDINATE, \
+from evenvizion.processing.constants import INFINITY_COORDINATE, \
     THRESHOLD_FOR_FIND_HOMOGRAPHY, LENGTH_ACCOUNTED_POINTS
 
 

@@ -3,8 +3,7 @@ EvenVizion library.
 https://github.com/AIHunters/EvenVizion
 
 Supporting paper at:
-https://github.com/AIHunters/EvenVizion/blob/master/EvenVizion%20-%20video%20based%20camera%20localization%20component.pdf
-
+https://github.com/AIHunters/EvenVizion/blob/master/EvenVizion-video_based_camera_localization_component.pdf
 This is licensed under an MIT license. See the LICENSE.md file
 for more information.
 
@@ -18,11 +17,11 @@ import imutils
 
 logging.basicConfig(level=logging.DEBUG)
 
-from EvenVizion.processing.frame_processing import FrameProcessing
-from EvenVizion.processing.matching import NoMatchesException
-from EvenVizion.processing.utils import compute_homography, \
+from evenvizion.processing.frame_processing import FrameProcessing
+from evenvizion.processing.matching import NoMatchesException
+from evenvizion.processing.utils import compute_homography, \
     HomographyException, matrix_superposition
-from EvenVizion.visualization.processing_visualization import draw_matches
+from evenvizion.visualization.processing_visualization import draw_matches
 
 
 def get_homography_dict(capture, resize_width=400, matching_path=None, none_H_processing=True):

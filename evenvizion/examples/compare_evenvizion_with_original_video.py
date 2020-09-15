@@ -3,8 +3,7 @@ EvenVizion library.
 https://github.com/AIHunters/EvenVizion
 
 Supporting paper at:
-https://github.com/AIHunters/EvenVizion/blob/master/EvenVizion%20-%20video%20based%20camera%20localization%20component.pdf
-
+https://github.com/AIHunters/EvenVizion/blob/master/EvenVizion-video_based_camera_localization_component.pdf
 This is licensed under an MIT license. See the LICENSE.md file
 for more information.
 
@@ -23,8 +22,8 @@ main_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 sys.path.append(main_dir)
 
 
-from EvenVizion.visualization.stabilization import create_video_comparison
-from EvenVizion.processing.utils import superposition_dict, read_homography_dict
+from evenvizion.visualization.stabilization import create_video_comparison
+from evenvizion.processing.utils import superposition_dict, read_homography_dict
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='custom arguments without using Sacred library')

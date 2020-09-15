@@ -3,8 +3,7 @@ EvenVizion library.
 https://github.com/AIHunters/EvenVizion
 
 Supporting paper at:
-https://github.com/AIHunters/EvenVizion/blob/master/EvenVizion%20-%20video%20based%20camera%20localization%20component.pdf
-
+https://github.com/AIHunters/EvenVizion/blob/master/EvenVizion-video_based_camera_localization_component.pdf
 This is licensed under an MIT license. See the LICENSE.md file
 for more information.
 
@@ -14,9 +13,9 @@ To describe the key points from a frame.
 import cv2
 import numpy as np
 
-from EvenVizion.processing.constants import THRESHOLD_FOR_FIND_HOMOGRAPHY, \
+from evenvizion.processing.constants import THRESHOLD_FOR_FIND_HOMOGRAPHY, \
     LOWES_RATIO, MINIMUM_MATCHING_POINTS
-from EvenVizion.processing.utils import remove_double_matching, \
+from evenvizion.processing.utils import remove_double_matching, \
     find_point_displacement, get_largest_group_points
 
 

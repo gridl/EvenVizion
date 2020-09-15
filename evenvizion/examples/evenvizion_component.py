@@ -3,7 +3,7 @@ EvenVizion library.
 https://github.com/RnD-Oxagile/EvenVizion
 
 Supporting paper at:
-https://github.com/RnD-Oxagile/EvenVizion/blob/master/EvenVizion%20-%20video%20based%20camera%20localization%20component.pdf
+https://github.com/AIHunters/EvenVizion/blob/master/EvenVizion-video_based_camera_localization_component.pdf
 
 This is licensed under an MIT license. See the README.md file
 for more information.
@@ -27,11 +27,11 @@ sys.path.append(main_dir)
 main_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(main_dir)
 
-from EvenVizion.processing.fixed_coordinate_system import from_original_to_fix
-from EvenVizion.processing.utils import read_homography_dict, superposition_dict, \
+from evenvizion.processing.fixed_coordinate_system import from_original_to_fix
+from evenvizion.processing.utils import read_homography_dict, superposition_dict, \
     are_infinity_coordinates, read_json_with_coordinates
-from EvenVizion.processing.video_processing import get_homography_dict
-from EvenVizion.visualization.processing_visualization import \
+from evenvizion.processing.video_processing import get_homography_dict
+from evenvizion.visualization.processing_visualization import \
     heatmap_video_processing, comparison_original_with_fixed_coordinate_video_processing
 
 

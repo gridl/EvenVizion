@@ -1,4 +1,4 @@
-<img src='./EvenVizion/examples/test_video_processing/test_video/visualize_camera_stabilization/visualize_camera_stabilization.gif'>
+<img src='./evenvizion/examples/test_video_processing/test_video/visualize_camera_stabilization/visualize_camera_stabilization.gif'>
 
 ------------------
 
@@ -21,7 +21,7 @@ If you prefer to download the source yourself
 
 ```bash
 git clone https://github.com/AIHunters/EvenVizion.git
-cd EvenVizion
+cd evenvizion
 ```
 
 #### Requirements
@@ -29,7 +29,7 @@ All the necessary libraries and versions you can find in requirements.txt.
 
 ## Basic use
 
-[Here](https://github.com/AIHunters/EvenVizion/tree/master/EvenVizion/examples)  you can find examples of package usage.
+[Here](https://github.com/AIHunters/EvenVizion/tree/master/evenvizion/examples)  you can find examples of package usage.
 
 ### evenvizion_component.py
 ` $python3 evenvizion_component.py --path_to_video="test_video/test_video.mp4" --experiment_folder="experiment"  --experiment_name="test_video_processing" --path_to_original_coordinate="test_video/original_coordinates.json" `
@@ -50,15 +50,15 @@ As a result, you get JSON with the matrix of a homography between two frames (no
 - path to result jsons: experiment_folder + experiment_name
 - path to fixed_coordinate_system_visualization: experiment_folder + video_name +  experiment_name + fixed_coordinate_system_visualization
 
-<img src='./EvenVizion/examples/test_video_processing/test_video/fixed_coordinate_system_visualization/fixed_coordinate_system_visualization.gif'>
+<img src='./evenvizion/examples/test_video_processing/test_video/fixed_coordinate_system_visualization/fixed_coordinate_system_visualization.gif'>
 
 - path to heatmap_visualization: experiment_folder + experiment_name + video_name + heatmap_visualization
 
-<img src='./EvenVizion/examples/test_video_processing/test_video/heatmap_visualization/heatmap.gif'>
+<img src='./evenvizion/examples/test_video_processing/test_video/heatmap_visualization/heatmap.gif'>
 
 - path to matching_visualization: experiment_folder + experiment_name + video_name +  heatmap_visualization
 
-<img src='./EvenVizion/examples/test_video_processing/test_video/matching_visualization/matching_visualization.gif'>
+<img src='./evenvizion/examples/test_video_processing/test_video/matching_visualization/matching_visualization.gif'>
 
 
 ### compare_evenvizion_with_original_video.py
@@ -75,7 +75,7 @@ As a result, you get JSON with the matrix of a homography between two frames (no
 As a result, you get visualize_camera_stabilization
 - path to  the result: experiment_folder + experiment_name + video_name + visualize_camera_stabilization
 
-<img src='./EvenVizion/examples/test_video_processing/test_video/visualize_camera_stabilization/visualize_camera_stabilization.gif'>
+<img src='./evenvizion/examples/test_video_processing/test_video/visualize_camera_stabilization/visualize_camera_stabilization.gif'>
 
 
 In this visualization, such changes as scaling and rotation are ignored. We took into consideration only the camera transition. But using the homography matrix from the previous step we can recalculate the coordinates considering all camera movements (Transition, scale, and rotation). You can see it in  heatmap_visualization.
