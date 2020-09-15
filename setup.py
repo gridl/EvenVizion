@@ -10,6 +10,8 @@ setuptools.setup(
     author_email="oss@aihunters.com",
     description="EvenVizion - is a video-based camera localization component",
     url="https://github.com/AIHunters/EvenVizion",
+    long_description=long_description,
+    long_description_content_type="text/markdown",	
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
