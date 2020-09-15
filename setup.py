@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="EvenVizion-pkg-AIHunters",
+    name="evenvizion",
     version="0.9",
     author="AIHunters",
     author_email="oss@aihunters.com",
