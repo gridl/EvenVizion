@@ -5,7 +5,7 @@ with open("README.rst", "r") as fh:
 
 setuptools.setup(
     name="evenvizion",
-    version="0.9.2",
+    version="0.9.3",
     author="AIHunters",
     author_email="oss@aihunters.com",
     description="EvenVizion - is a video-based camera localization component",
